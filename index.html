@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTP Framework: the diagnostic for why people pay</title>
+  <meta name="description" content="An interactive diagnostic for the Willingness-to-Pay Framework. Find the primary driver, the positioning, the first tactics, and the brakes to check. Bilingual English and Indonesian." />
+  <meta name="color-scheme" content="light" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="WTP Framework: the diagnostic for why people pay" />
+  <meta property="og:description" content="A demand-and-supply architecture for understanding why people pay, how much, and how payment behavior can be influenced." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: distinctive editorial pairing, not system defaults -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="brand" href="#top" aria-label="WTP Framework home">
+        <span class="brand__mark" aria-hidden="true">WTP</span>
+        <span class="brand__rule" aria-hidden="true"></span>
+        <span class="brand__sub" data-i18n="brandSub">The Willingness-to-Pay Framework</span>
+      </a>
+      <nav class="masthead__nav" aria-label="Primary">
+        <a href="framework/wtp-framework.en.md" data-i18n="navRead">Read the framework</a>
+        <a href="https://github.com/dharmawan-id/wtp-framework" data-i18n="navRepo" rel="noopener">Source</a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" class="lang__btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang__btn" data-lang="id" aria-pressed="false">ID</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="hero__eyebrow" data-i18n="heroEyebrow">Interactive diagnostic</p>
+      <h1 class="hero__title">
+        <span data-i18n="heroTitleA">Why do people</span>
+        <span class="hero__mark" data-i18n="heroTitleB">pay?</span>
+      </h1>
+      <p class="hero__lede" data-i18n="heroLede">A four-step read of any product or offer. It returns the primary driver, the positioning to take, the first tactics to deploy, and the demand-side brakes you need to clear.</p>
+      <div class="hero__meta">
+        <span data-i18n="heroMeta1">13 drivers</span>
+        <span aria-hidden="true">/</span>
+        <span data-i18n="heroMeta2">5 clusters</span>
+        <span aria-hidden="true">/</span>
+        <span data-i18n="heroMeta3">demand and supply</span>
+      </div>
+      <a class="hero__start" href="#tool" data-i18n="heroStart">Start the diagnostic</a>
+    </section>
+
+    <section class="tool" id="tool" aria-labelledby="tool-heading">
+      <div class="tool__head">
+        <h2 id="tool-heading" class="tool__title" data-i18n="toolTitle">The diagnostic</h2>
+        <ol class="stepper" aria-hidden="true">
+          <li class="stepper__item is-current" data-step="1"><span>1</span><em data-i18n="step1">Cluster</em></li>
+          <li class="stepper__item" data-step="2"><span>2</span><em data-i18n="step2">Driver</em></li>
+          <li class="stepper__item" data-step="3"><span>3</span><em data-i18n="step3">Refine</em></li>
+          <li class="stepper__item" data-step="4"><span>4</span><em data-i18n="step4">Diagnosis</em></li>
+        </ol>
+      </div>
+
+      <!-- STEP 1: cluster -->
+      <div class="panel is-active" data-panel="1">
+        <p class="panel__q" data-i18n="q1">What is the buyer mainly trying to do?</p>
+        <div class="cards" id="cluster-cards"></div>
+      </div>
+
+      <!-- STEP 2: driver -->
+      <div class="panel" data-panel="2">
+        <p class="panel__q" data-i18n="q2">Within that, which is closest?</p>
+        <div class="cards" id="driver-cards"></div>
+        <button type="button" class="back" data-back="1" data-i18n="back">Back</button>
+      </div>
+
+      <!-- STEP 3: refine -->
+      <div class="panel" data-panel="3">
+        <p class="panel__q" data-i18n="q3">Two optional refinements.</p>
+        <div class="refine">
+          <fieldset class="refine__group">
+            <legend data-i18n="refineStage">Which journey stage is this for?</legend>
+            <div class="chips" id="stage-chips"></div>
+          </fieldset>
+          <fieldset class="refine__group">
+            <legend data-i18n="refineB2b">Who is buying?</legend>
+            <div class="chips" id="mode-chips">
+              <button type="button" class="chip is-active" data-mode="b2c" aria-pressed="true" data-i18n="modeB2c">A person</button>
+              <button type="button" class="chip" data-mode="b2b" aria-pressed="false" data-i18n="modeB2b">An organization</button>
+            </div>
+          </fieldset>
+        </div>
+        <div class="panel__actions">
+          <button type="button" class="back" data-back="2" data-i18n="back">Back</button>
+          <button type="button" class="go" id="run" data-i18n="run">Run diagnosis</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: result -->
+      <div class="panel" data-panel="4">
+        <div id="result" class="result" aria-live="polite"></div>
+        <div class="panel__actions">
+          <button type="button" class="back" data-back="3" data-i18n="back">Back</button>
+          <button type="button" class="go go--ghost" id="restart" data-i18n="restart">Start over</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="closer">
+      <p class="closer__note" data-i18n="closerNote">This tool runs the decision tree in section 20 of the framework. It is a starting hypothesis, not a measurement. Return to the full document to refine.</p>
+      <div class="closer__links">
+        <a href="framework/wtp-framework.en.md" data-i18n="closerEn">Framework (English)</a>
+        <a href="framework/wtp-framework.id.md" data-i18n="closerId">Kerangka (Indonesia)</a>
+        <a href="framework/sources.md" data-i18n="closerSrc">Sources</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <p>
+      <span data-i18n="footAuthor">Originated and developed by Dharmawan.</span>
+      <span data-i18n="footLicense">Framework text CC BY 4.0, tool code MIT.</span>
+    </p>
+  </footer>
+
+  <script src="assets/data/framework.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs and temp
+*.log
+*.tmp
+
+# Dependencies (this is a no-build static project; none expected)
+node_modules/

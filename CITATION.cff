@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it as below."
+title: "The Willingness-to-Pay Framework"
+abstract: "A demand-and-supply architecture for understanding why people pay, how much they pay, and how payment behavior can be influenced. Synthesized from consumer psychology, behavioral economics, and marketing science, with adjustments for Indonesian and collectivist market contexts."
+type: dataset
+authors:
+  - family-names: Dharmawan
+    given-names: Dharmawan
+version: "5.0"
+date-released: "2026-06-04"
+license: CC-BY-4.0
+keywords:
+  - willingness to pay
+  - consumer psychology
+  - behavioral economics
+  - positioning
+  - marketing strategy
+  - pricing
+  - Indonesia
