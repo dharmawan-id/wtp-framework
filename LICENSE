@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-NOTE ON SCOPE: This MIT License covers the SOFTWARE in this repository (the
-interactive diagnostic in /assets and index.html, scripts, and configuration).
-The FRAMEWORK TEXT (the documents in /framework, /examples, and the framework
-prose in README) is licensed separately under Creative Commons
-Attribution 4.0 International (CC BY 4.0). See LICENSE-CONTENT.
