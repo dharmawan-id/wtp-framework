@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.dharmawan-id/wtp-mcp",
+  "title": "WTP framework",
+  "description": "Diagnose why buyers pay and how to price it: 13 drivers, decision tree, ethics gate.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/dharmawan-id/wtp-framework",
+    "source": "github",
+    "subfolder": "mcp"
+  },
+  "websiteUrl": "https://github.com/dharmawan-id/wtp-framework",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "wtp-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

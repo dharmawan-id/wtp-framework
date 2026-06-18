@@ -1,0 +1,18 @@
+{
+  "name": "wtp-mcp",
+  "version": "0.1.0",
+  "description": "The Willingness-to-Pay framework as an MCP server: your AI agent reads the drivers, runs the decision tree, and scaffolds a diagnosis.",
+  "type": "module",
+  "bin": { "wtp-mcp": "server.mjs" },
+  "main": "server.mjs",
+  "files": ["server.mjs", "wtp.mjs", "agents.md", "README.md"],
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "homepage": "https://github.com/dharmawan-id/wtp-framework/tree/main/mcp",
+  "repository": { "type": "git", "url": "git+https://github.com/dharmawan-id/wtp-framework.git", "directory": "mcp" },
+  "keywords": ["mcp", "model-context-protocol", "willingness-to-pay", "pricing", "positioning", "consumer-psychology", "marketing", "ai-agents"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  }
+}
