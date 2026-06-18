@@ -13,6 +13,6 @@
   "keywords": ["mcp", "model-context-protocol", "willingness-to-pay", "pricing", "positioning", "consumer-psychology", "marketing", "ai-agents"],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
-    "zod": "^3.23.0"
+    "zod": "^4.4.3"
   }
 }
